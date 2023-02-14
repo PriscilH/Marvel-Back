@@ -40,4 +40,3 @@ app.listen(process.env.PORT, () => {
     console.log("Bienvenue sur le serveur Marvel ! sur le port" + PORT);
 });
 
-//hkdmXitbrO8hsuPW // API KEY MARVEL
