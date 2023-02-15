@@ -7,7 +7,7 @@ require("dotenv").config();
 app.use(express.json());
 app.use(cors());
 
-mongoose.connect("mongodb://localhost/back-marvel")
+mongoose.connect(process.env.MONGODB_URI)
 
 // Import du model User
 const User = require("./models/User");
