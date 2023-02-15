@@ -37,6 +37,6 @@ app.all("*", (req, res) => {
 const PORT = process.env.PORT || 3001
 
 app.listen(process.env.PORT, () => {
-    console.log("Bienvenue sur le serveur Marvel ! sur le port" + PORT);
+    console.log("Bienvenue sur le serveur Marvel ! sur le port " + PORT);
 });
 
