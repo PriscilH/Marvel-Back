@@ -1,9 +1,8 @@
+require("dotenv").config();
 const express = require("express");
 const cors = require("cors");
 
 const app = express();
-require("dotenv").config();
-app.use(express.json());
 app.use(cors());
 
 
@@ -25,8 +24,13 @@ const searchRoutes = require("./routes/search");
 app.use(searchRoutes);
 
 app.get("/", (req, res) => {
-    res.json({ message: "Welcome on API Marvel !" });
-  });
+    try {
+        // console.log(process.env.MARVEL_API_KEY); // aoNbSx9f0IWEtt7q
+        return res.status(200).json("Bienvenue sur notre serveur Marvel 🍣");
+      } catch (error) {
+        return res.status(400).json({ error: error.message });
+      }
+    });
 
 app.all("*", (req, res) => {
     res.status(404).json({error: error.message})
@@ -34,7 +38,7 @@ app.all("*", (req, res) => {
 
 const PORT = process.env.PORT || 3001
 
-app.listen(process.env.PORT, () => {
+app.listen(process.env.PORT || 3001, () => {
     console.log("Bienvenue sur le serveur Marvel ! sur le port " + PORT);
 });
 
