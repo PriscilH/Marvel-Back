@@ -20,8 +20,6 @@ const charactersRoutes = require("./routes/characters");
 app.use(charactersRoutes);
 const comicsRoutes = require("./routes/comics");
 app.use(comicsRoutes);
-const searchRoutes = require("./routes/search");
-app.use(searchRoutes);
 
 app.get("/", (req, res) => {
     try {
