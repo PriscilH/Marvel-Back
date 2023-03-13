@@ -1,10 +1,13 @@
 require("dotenv").config();
+const mongoose = require("mongoose");
 const express = require("express");
 const cors = require("cors");
 
 const app = express();
+app.use(express.json());
 app.use(cors());
 
+mongoose.connect(process.env.MONGODB_URI);
 
 // Import du model User
 const User = require("./models/User");
