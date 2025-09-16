@@ -46,20 +46,18 @@ Il expose des endpoints API pour la gestion des utilisateurs et l’accès aux d
    ```
 
 3. **Configurer les variables d'environnement**
-
 Créer un fichier .env à la racine avec par exemple :
 
-    ```bash
-    PORT=5000
-    MONGODB_URI=mongodb+srv://<user>:<password>@cluster.mongodb.net/marvel
-    MARVEL_PUBLIC_KEY=ta_cle_publique
-    MARVEL_PRIVATE_KEY=ta_cle_privee
-    ```
+```bash
+PORT=5000
+MONGODB_URI=mongodb+srv://<user>:<password>@cluster.mongodb.net/marvel
+MARVEL_PUBLIC_KEY=ta_cle_publique
+MARVEL_PRIVATE_KEY=ta_cle_privee
+```
 
 4. **Lancer le serveur**
-
 Par défaut le serveur tourne sur http://localhost:5000.
 
-    ```bash
-     npm start
-    ```
+```bash
+npm start
+```
